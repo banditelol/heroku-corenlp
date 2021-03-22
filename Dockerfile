@@ -2,10 +2,10 @@ FROM java:jre-alpine
 
 RUN apk add --update --no-cache unzip wget
 
-RUN wget http://nlp.stanford.edu/software/stanford-corenlp-3.9.2.zip
-RUN unzip stanford-corenlp-3.9.2.zip && rm stanford-corenlp-3.9.2.zip
+RUN wget http://nlp.stanford.edu/software/stanford-corenlp-full-2018-10-05.zip
+RUN unzip stanford-corenlp-full-2018-10-05.zip && rm stanford-corenlp-full-2018-10-05.zip
 
-WORKDIR stanford-corenlp-3.9.2
+WORKDIR stanford-corenlp-full-2018-10-05
 
 RUN export CLASSPATH="`find . -name '*.jar'`"
 
